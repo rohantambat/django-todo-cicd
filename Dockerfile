@@ -1,10 +1,10 @@
 FROM python:3
 
-WORKDIR /data
+WORKDIR apps
 
 RUN pip install django==3.2
 
-COPY . .
+COPY . /apps
 
 RUN python manage.py migrate
 
